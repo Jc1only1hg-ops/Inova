@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
-    background-color: #e8f4fd;
-    background: linear-gradient(135deg, #f5f9fc 0%, #cde5f5 100%);
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +47,7 @@ body{
 }
 
 .container button{
-    background-color: #0A66C2;
+    background-color: #2da0a8;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -148,9 +148,9 @@ body{
 }
 
 .toggle{
-    background-color: #0A66C2;
+    background-color: #2da0a8;
     height: 100%;
-    background: linear-gradient(135deg, #0A66C2 0%, #005c99 100%);
+    background: linear-gradient(to right, #5c6bc0, #0A66C2);
     color: #fff;
     position: relative;
     left: -100%;

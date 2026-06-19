@@ -563,6 +563,35 @@ footer {
     gap: 24px;
 }
 
+.footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+}
+
+.contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #cde5f5;
+    text-decoration: none;
+    opacity: 0.92;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contact-item:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.contact-item i {
+    width: 18px;
+    text-align: center;
+    color: #fff;
+}
+
 .footer-logo {
     font-size: 1.8rem;
     font-weight: 800;

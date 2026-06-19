@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.3
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 31-05-2026 a las 21:50:02
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 19-06-2026 a las 19:21:16
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `ineva_db`
+-- Base de datos: `ineova`
 --
 
 -- --------------------------------------------------------
@@ -114,7 +114,7 @@ INSERT INTO `perfil_estudiantes` (`id`, `usuario_id`, `nombre`, `apellido`, `uni
 CREATE TABLE `planes_suscripcion` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL COMMENT 'Nombre de la suscripción, como: gratuito, premium o VIP.',
-  `precio` decimal(10,0) NOT NULL COMMENT 'Para guardar el costo del plan.',
+  `precio` decimal(10,2) NOT NULL COMMENT 'Para guardar el costo del plan.',
   `limite_busquedas` int(11) NOT NULL COMMENT 'Para limitar las búsquedas según el plan.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -123,7 +123,10 @@ CREATE TABLE `planes_suscripcion` (
 --
 
 INSERT INTO `planes_suscripcion` (`id`, `nombre`, `precio`, `limite_busquedas`) VALUES
-(1, 'Gratuito', 0, 10);
+(1, 'Bronce', 25.99, 25),
+(7, 'Plata', 59.99, 50),
+(8, 'Oro', 99.99, 9999),
+(9, 'Gratuito', 0.00, 5);
 
 -- --------------------------------------------------------
 
@@ -283,7 +286,7 @@ ALTER TABLE `perfil_estudiantes`
 -- AUTO_INCREMENT de la tabla `planes_suscripcion`
 --
 ALTER TABLE `planes_suscripcion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `reseñas`
@@ -318,7 +321,7 @@ ALTER TABLE `empresas`
 -- Filtros para la tabla `estudiante_habilidad`
 --
 ALTER TABLE `estudiante_habilidad`
-  ADD CONSTRAINT `estudiantes_fk` FOREIGN KEY (`estudiante_id`) REFERENCES `perfil_estudiantes` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `estudiantes_fk` FOREIGN KEY (`estudiante_id`) REFERENCES `perfil_estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `habilidades_fk` FOREIGN KEY (`habilidad_id`) REFERENCES `habilidades` (`id`) ON DELETE CASCADE;
 
 --
