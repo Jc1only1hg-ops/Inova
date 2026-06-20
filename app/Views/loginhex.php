@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/loginhex.css" />
+    <link rel="stylesheet" href="<?= base_url('css/loginhex.css') ?>" />
     <title>Acceder | Ineova</title>
   </head>
 
@@ -51,6 +51,6 @@
       </div>
     </div>
 
-    <script src="scripts/loginhex.js"></script>
+    <script src="<?= base_url('scripts/loginhex.js') ?>"></script>
   </body>
 </html>

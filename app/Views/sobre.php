@@ -21,17 +21,17 @@
             <div class="navbar">
                 <div class="logo-wrapper">
                     <!-- De aquí en adelante se aplican los punteros de dirección de páginas -->
-                    <a href="index.html" class="logo-linkedin">
+                    <a href="<?= base_url() ?>" class="logo-linkedin">
                         <span>Ine</span>
                     </a>
                     <div class="logo-text">Ine<span>ova</span></div>
                 </div>
                 <div class="nav-links">
                     <a href="index.html">Inicio</a>
-                    <a href="sobre.html">Sobre nosotros</a>
+                    <a href="<?= base_url('sobre') ?>">Sobre nosotros</a>
                     <a href="#contacto">Contacto</a>
-                    <a href="loginhex.html" class="btn-outline-blue">Ingresar</a>
-                    <a href="#" class="btn-solid-blue">Regístrate</a>
+                    <a href="<?= base_url('login') ?>" class="btn-outline-blue">Ingresar</a>
+                    <a href="<?= base_url('login#register') ?>" class="btn-solid-blue">Regístrate</a>
                     <!-- Aquí se cierra el contenedor de enlaces -->
                 </div>
             </div>
@@ -43,7 +43,7 @@
             <div class="footer-content">
                 <div class="footer-logo">Ine<span style="color:#6ab0f5;">ova</span></div>
                 <div class="footer-contact">
-                    <a href="sobre.html" class="contact-item"><i class="fas fa-map-marker-alt"></i> Sobre nosotros</a>
+                    <a href="<?= base_url('sobre') ?>" class="contact-item"><i class="fas fa-map-marker-alt"></i> Sobre nosotros</a>
                     <a href="mailto:contacto@ineova.com" class="contact-item"><i class="fas fa-envelope"></i> contacto@ineova.com</a>
                     <a href="tel:+582121234567" class="contact-item"><i class="fas fa-phone"></i> +58 212 123 4567</a>
                 </div>

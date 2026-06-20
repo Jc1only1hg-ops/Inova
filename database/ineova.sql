@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.3
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 19-06-2026 a las 19:21:16
+-- Servidor: localhost
+-- Tiempo de generación: 20-06-2026 a las 20:28:29
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -159,15 +159,16 @@ CREATE TABLE `universidades` (
   `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL COMMENT 'Nombre de la universidad.',
   `siglas` varchar(20) NOT NULL COMMENT 'Siglas como por ejemplo: UCV, UCM, UC, etc.',
-  `ranking_uni` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'Número de ranking: 1 = mejor puesto, 0 = sin asignar.'
+  `ranking_uni` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'Número de ranking: 1 = mejor puesto, 0 = sin asignar.',
+  `es_colaboradora` tinyint(1) NOT NULL DEFAULT 0 COMMENT '0 = Sin convenio, 1 = Universidad con convenio oficial/verificada'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `universidades`
 --
 
-INSERT INTO `universidades` (`id`, `nombre`, `siglas`, `ranking_uni`) VALUES
-(1, 'Universidad marítima del caribe', 'UMC', 33);
+INSERT INTO `universidades` (`id`, `nombre`, `siglas`, `ranking_uni`, `es_colaboradora`) VALUES
+(1, 'Universidad marítima del caribe', 'UMC', 33, 0);
 
 -- --------------------------------------------------------
 
